@@ -1,0 +1,112 @@
+[
+  {
+    "from_state": "START_STATE_MACHINE",
+    "to_state": "SHIPMENT_CREATED",
+    "event_name": "SHIPMENT_CREATED"
+  },
+  {
+    "from_state": "SHIPMENT_CREATED",
+    "to_state": "OUT_FOR_PICKUP",
+    "event_name": "OUT_FOR_PICKUP"
+  },
+  {
+    "from_state": "OUT_FOR_PICKUP",
+    "to_state": "PICKUP_COMPLETED",
+    "event_name": "PICKUP_COMPLETED"
+  },
+  {
+    "from_state": "PICKUP_COMPLETED",
+    "to_state": "INSCAN_AT_PICKUP_HUB",
+    "event_name": "INSCAN_AT_PICKUP_HUB"
+  },
+  {
+    "from_state": "INSCAN_AT_PICKUP_HUB",
+    "to_state": "IN_TRANSIT",
+    "event_name": "IN_TRANSIT"
+  },
+  {
+    "from_state": "IN_TRANSIT",
+    "to_state": "PENDING",
+    "event_name": "PENDING"
+  },
+  {
+    "from_state": "PENDING",
+    "to_state": "OUT_FOR_DELIVERY",
+    "event_name": "OUT_FOR_DELIVERY"
+  },
+  {
+    "from_state": "OUT_FOR_DELIVERY",
+    "to_state": "DELIVERED",
+    "event_name": "DELIVERED"
+  },
+  {
+    "from_state": "OUT_FOR_DELIVERY",
+    "to_state": "PENDING",
+    "event_name": "PENDING"
+  },
+  {
+    "from_state": "PENDING",
+    "to_state": "PENDING",
+    "event_name": "PENDING"
+  },
+  {
+    "from_state": "SHIPMENT_CREATED",
+    "to_state": "CANCELLATION_REQUESTED",
+    "event_name": "CANCELLATION_REQUESTED"
+  },
+  {
+    "from_state": "OUT_FOR_PICKUP",
+    "to_state": "CANCELLATION_REQUESTED",
+    "event_name": "CANCELLATION_REQUESTED"
+  },
+  {
+    "from_state": "PICKUP_COMPLETED",
+    "to_state": "CANCELLATION_REQUESTED",
+    "event_name": "CANCELLATION_REQUESTED"
+  },
+  {
+    "from_state": "INSCAN_AT_PICKUP_HUB",
+    "to_state": "CANCELLATION_REQUESTED",
+    "event_name": "CANCELLATION_REQUESTED"
+  },
+  {
+    "from_state": "IN_TRANSIT",
+    "to_state": "CANCELLATION_REQUESTED",
+    "event_name": "CANCELLATION_REQUESTED"
+  },
+  {
+    "from_state": "PENDING",
+    "to_state": "CANCELLATION_REQUESTED",
+    "event_name": "CANCELLATION_REQUESTED"
+  },
+  {
+    "from_state": "CANCELLATION_REQUESTED",
+    "to_state": "CANCELLED",
+    "event_name": "CANCELLED"
+  },
+  {
+    "from_state": "CANCELLED",
+    "to_state": "RETURN_PENDING",
+    "event_name": "RETURN_PENDING"
+  },
+  {
+    "from_state": "RETURN_PENDING",
+    "to_state": "RETURN_PENDING",
+    "event_name": "RETURN_PENDING"
+  },
+  {
+    "from_state": "RETURN_PENDING",
+    "to_state": "RETURN_OUT_FOR_DELIVERY",
+    "event_name": "RETURN_OUT_FOR_DELIVERY"
+  },
+  {
+    "from_state": "RETURN_OUT_FOR_DELIVERY",
+    "to_state": "RETURN_DELIVERED",
+    "event_name": "RETURN_DELIVERED"
+  },
+  {
+    "from_state": "RETURN_OUT_FOR_DELIVERY",
+    "to_state": "RETURN_PENDING",
+    "event_name": "RETURN_PENDING"
+  }
+]
